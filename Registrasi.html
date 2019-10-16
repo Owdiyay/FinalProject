@@ -1,0 +1,142 @@
+<html>
+<head>
+   <body bgcolor=" #ADD8E6">
+<title>VISITOUR</title>
+<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+<li><a href="responsive.css"></a></li>
+<style type="text/css">
+a{text-decoration:none;
+color:white;}
+body{
+margin:auto;
+font-family: Calibri;
+overflow:auto;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAF96VFh0UmF3IHByb2ZpbGUgdHlwZSBBUFAxAAAImeNKT81LLcpMVigoyk/LzEnlUgADYxMuE0sTS6NEAwMDCwMIMDQwMDYEkkZAtjlUKNEABZiYm6UBoblZspkpiM8FAE+6FWgbLdiMAAAAF0lEQVQYlWNgIAKwiZiqjSqipyIGBgYAqCwEk6vXHoMAAAAASUVORK5CYII=);
+}
+#container{
+color:white;
+background: #ADD8E6;
+width:500px;
+height:500px;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+padding:10px;
+}
+#login{
+position: absolute;
+top: 58%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+margin-bottom:10px;
+font-family: calibri;
+font-size: 25px;
+text-align: center;
+}
+#logo{
+  width:300px;
+  height:100px;
+  border:0px solid white;
+  font-family: Impact;
+  font-size:50px;
+  text-align:center;
+  margin:auto;
+  margin-bottom:10px;
+}
+#logo:after{
+  white-space: pre-wrap;
+  content:"\a Visit and Travel With Us!";
+  font-size:25px;
+  font-family:Calibri;
+
+}
+#userlogin input{
+width:300px;
+background:none;
+border:0;
+border-bottom:5px solid #FA8072;
+height:30px;
+padding:10px;
+color:black;
+margin-bottom:15px;
+text-align: center;
+font-size: 15px;
+}
+#userlogin button{
+border:0;
+background:#FA8072;
+width:300px;
+height:30px;
+font-size: 20px;
+}
+#sociallogin i{
+font-size:40px;
+margin:auto;
+text-align:center;}
+#sociallogin{
+text-align:center;}
+#sociallogin #button{
+border:0;
+background:#FA8072;
+width:300px;
+height: 30px;
+line-height:25px;
+color:white;
+margin:auto;
+display:inline-block;
+}
+#footer{
+position:absolute;
+bottom:0%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="logo">
+<a href="Home.html">VISITOUR</a>
+</div>
+<div style="clear:both"/>
+<div id="login">
+Daftar Akun Baru <hr>
+<form id="userlogin">
+<input type="text" placeholder="Username" id="username" required/><br>
+<input type="email" placeholder="Email" id="email" required/><br>
+<input type="password" placeholder="Password" id="password" required/><br>
+<button type="submit">Submit</button><a href="#">
+</form>
+<div id="sociallogin">
+<br>
+Sudah memiliki akun?<br>
+<a href="Login.html" id="button">Login</a>
+</div>
+
+</div>
+<div style="clear:both"/>
+<div id="footer">
+Visitour &#169; 2019.
+</div>
+</div>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script>
+  $('#userlogin').submit(function(){
+  var username = $("#username").val();
+  var password = $("#password").val();
+  var email = $("#email").val();
+  if (username == "" && password== "" && email == "" ) {
+    alert ("Maaf ada Kesalahan, Mohon Diisi Kembali");
+  }else {
+    alert ("Selamat telah berhasil daftar");
+    window.location.href = "Login.html";
+    return false;
+  }
+  });
+</script>
+</body>
+</html>
