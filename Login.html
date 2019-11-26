@@ -85,7 +85,7 @@ transform: translate(-50%, -50%);
 <body>
 <div id="container">
 <div id="logo">
-<a href="Home.html">VISITOUR</a>
+<a href="Home2.html">VISITOUR</a>
 </div>
 <div style="clear:both"/>
 <div id="login">
@@ -114,12 +114,20 @@ Visitour &#169; 2019.
   var password = $("#password").val();
   if (username == "ayunda" && password== "ayunda") {
     alert ("Selamat Datang Ayunda Nita Dwi Lestari di Visitour");
-    window.location.href = "Home.html"
+    window.location.href = "Home2.html"
+    return false;
+  }else {
+    alert ("Maaf ada Kesalahan, Mohon Diisi Kembali");
+  }
+   if (username == "admin" && password== "admin") {
+    alert ("Selamat Datang Admin di Visitour");
+    window.location.href = "Home3.html"
     return false;
   }else {
     alert ("Maaf ada Kesalahan, Mohon Diisi Kembali");
   }
   });
 </script>
+
 </body>
 </html>
