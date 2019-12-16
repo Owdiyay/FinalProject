@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>VISITOUR - Tambah Jadwal</title>
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/master.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/tambahbarang.css" type="text/css">
+</head>
+
+<body bgcolor=" #ADD8E6">
+    <div id="container">
+        <div id="header-wrapper">
+            <div id="logo">VISITOUR</div>
+            <div id="headlink">
+                <i class="fa fa-user-circle"></i> Admin
+                <!-- modal trigger -->
+  <a href="#"><i id="tombol" class="fa fa-sign-out"></i>logout</a>
+<!-- modal  start-->
+<div id="modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <center>Yakin akan logout ?</center>
+              <center>
+              <button class="morelink" id="tidak">Tidak</button>
+              <button class="morelink" id="ya">Ya</button>
+          </center>
+            </div>
+
+          </div>
+<!-- modal end -->
+
+<!-- script modal start -->
+
+<script>
+          // Get the modal
+          var modal = document.getElementById("modal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("tombol");
+          var ya = document.getElementById("ya");
+          var tidak = document.getElementById("tidak");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+          // When the user clicks the button "ya" go to  
+          tidak.onclick = function() {
+            modal.style.display = "none";
+          }
+          ya.onclick = function() {
+            location.replace("Home.html");
+          }
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+          </script>
+            </div>
+        </div>
+        <div style="clear:both" />
+        <div id="menu">
+            <div id="left">
+                <ul>
+                    <li><a class="active" href="Home3.html">Home</a></li>
+                    <li><a href="Wisata2.html">Wisata</a></li>
+                    <li><a href="Akomodasi2.html">Akomodasi</a></li>
+                    <li><a href="TambahJadwal.html">Jadwal</a></li>
+                    <li><a href="About2.html">About Us</a></li>
+                </ul>
+            </div>
+            <div id="right">
+                <div class="search-container">
+                    <form action="">
+                        <input type="search">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both" />
+        <div class="carousel">
+            <input id="image1" type="radio" name="image-selector" checked="checked" />
+            <label for="image4">View image 4</label>
+            <img src="assets/imageslide/1.jpg" />
+            <input id="image2" type="radio" name="image-selector" />
+            <label for="image1">View image 1</label>
+            <img src="assets/imageslide/2.jpg" />
+            <input id="image3" type="radio" name="image-selector" />
+            <label for="image2">View image 2</label>
+            <img src="assets/imageslide/3.jpg" />
+            <input id="image4" type="radio" name="image-selector" />
+            <label for="image3">View image 3</label>
+            <img src="assets/imageslide/4.jpg" />
+            <label for="image4">View image 4</label>
+            <label for="image1">View image 1</label>
+        </div>
+        <div style="clear:both" />
+        <div id="content-wrapper">
+            <div id="barangdetail-wrapper">
+                <br>
+                <br>
+                <div class="title">TAMBAH JADWAL</div>
+                <div class="container">
+                    <form action="" name="databarang">
+                        <div class="row">
+                            <div class="gambarpreview">
+                                <img src="https://via.placeholder.com/460x250" id="gambarpreview">
+                            </div>
+                            <label for="ingambar" class="ingambarlabel">Pilih gambar</label>
+                            <input type="file" name="gambarproduk" id="ingambar" class="inputgambar" required accept="image/*" onchange="namedefine();">
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="jadwal">Jadwal</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="jadwal" name="jadwal" placeholder="Masukkan Jadwal" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="jam">Jam</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="jam" name="jam" placeholder="Masukkan Jam" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="deskripsi">Deskripsi</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea name="deskripsi" id="deskripsi" placeholder="Tulis Deskripsi" style="height:200px" required></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both" />
+        <div id="save">
+            <button type="button" id="simpanbutton" onclick="if(document.forms['databarang'].checkValidity()){document.forms['databarang'].submit()} else{alert('Terdapat data tidak valid\nMohon cek kembali isian anda')}">Simpan</button>
+        </div>
+        <div style="clear:both" />
+        <div id="footer-wrapper">
+            <div class="details">
+                <i class="fa fa-address-book"></i> 081278652313<br>
+                <i class="fa fa-facebook-square"></i> visitour<br>
+                <i class="fa fa-instagram"></i> @Visitour<br>
+                <i class="fa fa-map-marker"></i> Jl. Kalimantan No. 37,<br>Kampus Tegalboto, Jember,<br>Jawa Timur, 68121, Indonesia
+            </div>
+            <div style="clear:both" /></div>
+        <div style="clear:both" /></div>
+    <script type="text/javascript">
+        function namedefine() {
+            event.preventDefault();
+            var ingambar = document.getElementsByClassName('inputgambar');
+            var inlabel = document.getElementsByClassName('ingambarlabel');
+            if (ingambar[0].value.length) {
+                inlabel[0].innerHTML = ingambar[0].files[0].name;
+                var oFReader = new FileReader();
+                oFReader.readAsDataURL(ingambar[0].files[0]);
+                oFReader.onload = function(oFREvent) {
+                    document.getElementById("gambarpreview").src = oFREvent.target.result;
+                };
+            } else {
+                console.log('cancelled');
+            }
+        }
+    </script>
+</body>
+
+</html>
