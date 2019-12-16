@@ -6,12 +6,12 @@
 <li><a href="responsive.css"></a></li>
 <style type='text/css'>
 a{
-  color: black;
-  text-decoration: #000;
+  color:black;
+  text-decoration:#a40f0f;
 }
 body{
 margin:auto;
-font-family: corbel;
+font-family: Calibri;
 }
 #container{
   width: 1000px;
@@ -37,7 +37,6 @@ font-family: corbel;
   content:"\a Visit and Travel With Us!";
   font-size:25px;
   font-family:Calibri;
-
 }
 
 #menu{
@@ -122,7 +121,7 @@ padding:5px;
     width: 25%;
     height: 29px;
     border-radius: 50%;
-    color: #07051a;
+    color: #FA8072;
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
@@ -138,7 +137,7 @@ padding:5px;
 #musthave .imagecont img{
   width:300px;
   height:200px;
-  border:2px solid #000;
+  border:2px solid #FA8072;
   padding:5px;
   border-radius:0px;
 }
@@ -166,30 +165,25 @@ float:left;
   margin:auto;
 }
 
-
-.highlight .list{
-
+#highlight #list{
+  content: "";
   display: table;
+  clear: both;
   width:100%;
-  margin:0 auto;
-  vertical-align: middle;
-  text-align:center;
+  margin:auto;
 }
-.highlight .column {
+#highlight .column {
   float: left;
-  width: 23%;
+  width: 20%;
+  padding: 10px;
+}
+#highlight .imagecont{
+
+  width: 50%;
   padding: 10px;
   margin:auto;
-  display: inline-block;
 }
-.highlight .imagecont{
-  padding: 10px;
-  width:100%;
-}
-.highlight .imagecont .productitle{
-  text-align:center;
-}
-.highlight .imagecont img{
+#highlight .imagecont img{
   width:200px;
   height:200px;
   border:2px solid #FA8072;
@@ -252,7 +246,7 @@ float:left;
   height:25px;
   line-height:22px;
   margin:-15px 10px 0 10px;
-  background-color:#ADD8E6;
+  background-color:#FA8072;
   color:white;
   font-family:'Arial';
   font-weight:bold;
@@ -261,7 +255,7 @@ float:left;
   visibility:hidden;
   border:2px solid white;
   border-radius:20px;
-  box-shadow:0 3px 4px red;
+  box-shadow:0 3px 4px #FA8072;
 }
 .carousel > label:hover:after {
   visibility:visible;
@@ -277,7 +271,7 @@ float:left;
 }
 
 
-#musthave .title, .highlight .title{
+#musthave .title, #highlight .title, #trolley-wrapper .title{
   font-family:Impact;
   border-top:0px solid #FA8072;
   border-bottom:6px solid #FA8072;
@@ -306,7 +300,7 @@ background:#FA8072;
 .morelink a{
 text-decoration: none;
 color:white;}
-#musthave, .highlight{
+#musthave, #highlight{
   margin-bottom:25px;
 }
 #headlink{
@@ -335,16 +329,10 @@ width:auto;
   .search-container form{
     width:150px;
   }
-  .highlight .column {
+  #highlight .column {
     float: left;
     width:44%;
     padding: 10px;
-  }
-
-  .highlight .imagecont img{
-display:block;
-margin-left: auto;
-margin-right: auto;
   }
   #musthave .column {
     float: left;
@@ -354,6 +342,17 @@ margin-right: auto;
   #headlink{
     right:0%;
   }
+  #trolley-wrapper .row #imgs.column{
+    width:97% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .width70{
+    width:100% !important;
+  }
 }
 @media screen and (max-width:600px) {
   #container{
@@ -362,6 +361,49 @@ margin-right: auto;
   .search-container form{
     width:150px;
   }
+}
+#trolley-wrapper{
+  width:100%;
+  clear:both;
+}
+#trolley-wrapper .row{
+margin-bottom:10px;
+clear:both;
+
+}
+#trolley-wrapper .column{
+  border:0px solid #FA8072;
+  height:160px;
+  float: left;
+  padding:10px;
+  width: 50%;
+      word-wrap: break-word;
+      white-space:nowrap
+}
+.column .image img{
+  width:230px;
+  height:auto;
+  margin:20px 10px;
+}
+.column .namabarang{
+
+}
+
+#checkoutbutton{
+  background: #FA8072;
+  border:none;
+  padding:10px;
+  font-size:20px;
+  color:white;
+  display:inline-block;
+}
+
+#checkout{
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-right:20px;
+  float:right;
+  display:block;
 }
 /*modal css */
 /* The Modal (background) */
@@ -403,15 +445,15 @@ margin-right: auto;
   text-decoration: none;
   cursor: pointer;
 }
-
 </style>
 </head>
 <body>
 <div id="container">
 <div id="header-wrapper">
-<div id="logo"><a href="index.html">VISITOUR</a></div>
+<div id="logo">VISITOUR</div>
 <div id="headlink">
-  <a href="user.html"><i class="fa fa-user-circle"></i> Ayunda</a>
+  <a href="user.html"><i class="fa fa-user-circle"></i> Admin</a>
+  <!-- modal trigger -->
   <a href="#"><i id="tombol" class="fa fa-sign-out"></i>logout</a>
 <!-- modal  start-->
 <div id="modal" class="modal">
@@ -472,12 +514,11 @@ margin-right: auto;
 <div id="menu">
   <div id="left">
   <ul>
-  <li><a href="Home.html">Home</a></li>
-  <li><a class="active" href="Wisata.html">Wisata</a></li>
-  <li><a href="Akomodasi.html">Akomodasi</a></li>
-  <li><a href="Jadwal.html">Jadwal</a></li>
-  <li><a href="About.html">About Us</a></li>
-
+  <li><a href="Home3.html">Home</a></li>
+  <li><a href="Wisata2.html">Wisata</a></li>
+  <li><a href="Akomodasi2.html">Akomodasi</a></li>
+  <li><a class="active" href="TambahJadwal.html">Jadwal</a></li>
+  <li><a href="About2.html">About Us</a></li>
 </ul>
 </div>
 <div id="right">
@@ -512,76 +553,49 @@ margin-right: auto;
 </div>
 <div style="clear:both"/>
 <div id="content-wrapper">
-  <div class="highlight">
-    <br>
-    <br>
-    <br>
-    <div class="title">
-      OUR VOCATIONS
+<div id="trolley-wrapper">
+  <br>
+  <br>
+  <br>
+  <div class="title">
+    JADWAL
+  </div>
+  <div class="row">
+  <div id="imgs" class="column" style="width:25%;">
+    <div class="image">
+      <img src="assets/11.jpg"/>
     </div>
-    <div class="list">
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/4.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Mountain</div>
-      </div>
-
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/6.jpg" alt="Cinque Terre"/>
-        <div class="productitle">River</div>
-      </div>
-
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/3.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Ocean</div>
-      </div>
-
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/1.jpeg" alt="Cinque Terre"/>
-        <div class="productitle">Waterfall</div>
-      </div>
-
-      </div>
-    </div>
-    <div class="list">
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/2.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Lake</div>
-      </div>
-
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/5.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Hill</div>
-      </div>
-</div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/8.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Hill</div>
-      </div>
-
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/9.jpg" alt="Cinque Terre"/>
-        <div class="productitle">Hill</div>
-      </div>
-
-      </div>
-    </div>
-    
+  </div>
+  <div id="desc" class="column" style="width:70%;">
+  <div class="namabarang">
+    <br>
+    <table>
+      <tr>
+        <td width="20%">Jadwal:</td>
+        <td>MOUNTAINT TRAIN</td>
+      </tr>
+      <tr>
+        <td width="20%">Harga Paket:</td>
+        <td>Rp. 15.000.000,-</td>
+      </tr>
+      <tr>
+        <td width="20%">Deskripsi:</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet sem rhoncus, tristique tortor at, auctor nunc. Morbi varius scelerisque nisl eget egestas.</td>
+      </tr>
+      <tr>
+        <td width="20%"> Tersedia:</td>
+        <td>90 Seat
+    </tr>
+      <tr>
+        <td width="20%">Jumlah Pesanan:</td>
+        <td><input type="number" min="1" value="1">
+      </tr>
+    </table>
   </div>
 </div>
+</div>
 <div style="clear:both"/>
+</div>
 <div id="footer-wrapper">
 <div class="details">
 <i class="fa fa-address-book"></i> 081278652313<br>
